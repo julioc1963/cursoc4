@@ -10,7 +10,7 @@ class Home extends BaseController
     {
         return view('md/mdjulio');
     }
-    public function webs() // para ruta con nombre
+    public function web() // para ruta con nombre
     {
         return view('md/web_rx');
     }

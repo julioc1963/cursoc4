@@ -7,7 +7,7 @@ Formulario
 <?= $this->section('contenido') ?>
 
 <div class="container">
-    <form action="<?php echo base_url('/movie/create') ?>" method="post">
+    <form action="<?php echo base_url('/Dashboard/movie/create') ?>" method="post">
         <label for="title">Title</label>
         <input class="form-control" type="text" id="title" name="title" value="" /><br />
         <label for="category_id">category_id</label>
@@ -16,7 +16,7 @@ Formulario
         <textarea class="form-control mb-3" rows="6" name="description" id=""> </textarea>
 
         <input type="submit" name="submit" value="enviar" class="btn btn-dark" />
-        <a class="btn btn-dark" href="<?php echo base_url('movie') ?>">Regresar →</a>
+        <a class="btn btn-dark" href="<?php echo base_url('Dashboard/movie') ?>">Regresar →</a>
     </form>
 </div>
 

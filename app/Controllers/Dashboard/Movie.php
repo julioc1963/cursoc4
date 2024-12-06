@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Dashboard;
 
 use App\Models\MovieModel;
 use App\Models\CategoryModel;
 use App\Models\MovieImageModel;
-//use App\Controllers\BaseController;
+use App\Controllers\BaseController;
 //use \CodeIgniter\Exceptions\PageNotFoundException;
 
 
@@ -66,7 +66,7 @@ class Movie extends BaseController
             'category_id' => $this->request->getpost('category_id'),
             'description' => $this->request->getpost('description')
         ]);
-        return redirect()->to(base_url('movie'));
+        return redirect()->to(base_url('Dashboard/movie'));
         
     }
 
@@ -100,7 +100,7 @@ class Movie extends BaseController
             'description' => $this->request->getpost('description')
         ]);
         
-        return redirect()->to(base_url('movie'));
+        return redirect()->to(base_url('Dashboard/movie'));
     }
 
     /**
@@ -114,6 +114,6 @@ class Movie extends BaseController
     {
         $movie = new MovieModel();
         $movie->delete($id);
-        return redirect()->to(base_url('movie'));
+        return redirect()->to(base_url('Dashboard/movie'));
     }
 }

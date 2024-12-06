@@ -31,7 +31,7 @@
                             <a class="nav-link" href="#">Casos Clinicos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href=" <?php echo base_url('movie'); ?>">Movies</a>
+                            <a class="nav-link" href=" <?php echo base_url('Dashboard/movie'); ?>">Movies</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ">

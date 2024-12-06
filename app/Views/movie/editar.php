@@ -7,7 +7,7 @@ Editar
 <?= $this->section('contenido') ?>
 
 <div class="container mt-5">
-    <form action=" <?php echo base_url('movie/update/') ?><?php echo $view['id'] ?>" method="post">
+    <form action=" <?php echo base_url('/Dashboard/movie/update/') ?><?php echo $view['id'] ?>" method="post">
         <label for="title">Title</label>
         <input class="form-control" type="text" id="title" name="title" value="<?php echo $view['title'] ?>" /><br />
 
@@ -19,7 +19,7 @@ Editar
 
         <input type="submit" name="submit" value="enviar" class="btn btn-dark" />
 
-        <a class="btn btn-dark" href="<?php echo base_url('movie') ?>">Regresar →</a>
+        <a class="btn btn-dark" href="<?php echo base_url('Dashboard/movie') ?>">Regresar →</a>
     </form>
 </div>
 

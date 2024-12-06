@@ -8,7 +8,7 @@ Index
 
 <div class="container mt-5">
 
-    <a class="btn btn-dark" href="<?php echo base_url('movie/new') ?> ">Crear</a>
+    <a class="btn btn-dark" href="<?php echo base_url('Dashboard/movie/new') ?> ">Crear</a>
     <a class="btn btn-dark" href="<?php echo base_url('/') ?> ">Mdjulio</a>
     <table class="table">
         <thead>
@@ -30,12 +30,12 @@ Index
                     <td><?= $m->category_id ?></td>
 
                     <td>
-                        <form action="<?php echo base_url('/movie/delete/') ?><?= $m->id ?>" method="POST">
+                        <form action="<?php echo base_url('Dashboard/movie/delete/') ?><?= $m->id ?>" method="POST">
                             <input type="submit" name="submit" value="Borrar" class="btn btn-dark" />
                         </form>
                     </td>
-                    <td><a class="btn btn-dark" href="<?php echo base_url('/movie/show/') ?><?= $m->id ?>"> Ver</a></td>
-                    <td><a class="btn btn-dark" href="<?php echo base_url('/movie/edit/') ?><?= $m->id ?>"> Editar</a></td>
+                    <td><a class="btn btn-dark" href="<?php echo base_url('Dashboard/movie/show/') ?><?= $m->id ?>"> Ver</a></td>
+                    <td><a class="btn btn-dark" href="<?php echo base_url('Dashboard/movie/edit/') ?><?= $m->id ?>"> Editar</a></td>
 
                 </tr>
             <?php endforeach ?>

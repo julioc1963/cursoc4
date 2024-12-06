@@ -7,8 +7,10 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-// rutas con nombre
-$routes->get('webs', 'Home::webs', ['as'=> 'web']);
 
+$routes->get('webs', 'Home::web');
 
-$routes->presenter('movie', ['placeholder' => '(:num)'] );
+$routes->group('Dashboard',  function($routes) {
+    $routes->presenter('movie', ['placeholder' => '(:num)', 'controller' => 'Dashboard\Movie'] );
+});
+
