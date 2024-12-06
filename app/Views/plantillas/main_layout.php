@@ -25,7 +25,7 @@
                             <a class="nav-link active" aria-current="page" href="#">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url(); ?>web_rx ">Webs de Interes</a>
+                            <a class="nav-link" href="<?php echo base_url(); ?>webs ">Webs de Interes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Casos Clinicos</a>

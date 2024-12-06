@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\MovieModel;
 use App\Models\CategoryModel;
 use App\Models\MovieImageModel;
-use App\Controllers\BaseController;
+//use App\Controllers\BaseController;
 //use \CodeIgniter\Exceptions\PageNotFoundException;
 
 
@@ -114,5 +114,6 @@ class Movie extends BaseController
     {
         $movie = new MovieModel();
         $movie->delete($id);
+        return redirect()->to(base_url('movie'));
     }
 }
