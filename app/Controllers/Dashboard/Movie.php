@@ -66,8 +66,8 @@ class Movie extends BaseController
             'category_id' => $this->request->getpost('category_id'),
             'description' => $this->request->getpost('description')
         ]);
-        return redirect()->to(base_url('Dashboard/movie'));
-        
+        //return redirect()->to(base_url('Dashboard/movie'));
+        return redirect()->to(base_url('Dashboard/movie'))->with('message', 'Registro agregado correctamente');
     }
 
     /**
@@ -100,7 +100,7 @@ class Movie extends BaseController
             'description' => $this->request->getpost('description')
         ]);
         
-        return redirect()->to(base_url('Dashboard/movie'));
+        return redirect()->to(base_url('Dashboard/movie'))->with('message', 'Registro editado correctamente'); ;
     }
 
     /**
@@ -114,6 +114,9 @@ class Movie extends BaseController
     {
         $movie = new MovieModel();
         $movie->delete($id);
+        session()->setFlashdata('message','Registro borrado correctamente');
+       // funcion flashdata
         return redirect()->to(base_url('Dashboard/movie'));
-    }
+}
+
 }

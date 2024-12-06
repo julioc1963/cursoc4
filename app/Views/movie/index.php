@@ -7,7 +7,8 @@ Index
 <?= $this->section('contenido') ?>
 
 <div class="container mt-5">
-
+   
+<?= view('partials/_session') ?>
     <a class="btn btn-dark" href="<?php echo base_url('Dashboard/movie/new') ?> ">Crear</a>
     <a class="btn btn-dark" href="<?php echo base_url('/') ?> ">Mdjulio</a>
     <table class="table">
@@ -41,6 +42,7 @@ Index
             <?php endforeach ?>
         </tbody>
     </table>
-    <?php //echo $pager->links(); ?>
+    <?php //echo $pager->links(); 
+    ?>
 </div>
 <?= $this->endSection(); ?>
