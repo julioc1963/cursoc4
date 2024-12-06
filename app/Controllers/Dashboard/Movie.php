@@ -61,11 +61,20 @@ class Movie extends BaseController
      */
     public function create()
     {   $movie = new MovieModel();
+        if ($this->validate('movies')){
         $movie->insert([
             'title'=> $this->request->getpost('title'),
             'category_id' => $this->request->getpost('category_id'),
             'description' => $this->request->getpost('description')
         ]);
+
+        }else {
+            session()->setFlashdata([
+                'validation' => $this->validator
+            ]);
+            return redirect()->back()->withInput();
+        }
+        
         //return redirect()->to(base_url('Dashboard/movie'));
         return redirect()->to(base_url('Dashboard/movie'))->with('message', 'Registro agregado correctamente');
     }
@@ -94,11 +103,19 @@ class Movie extends BaseController
     public function update($id = null)
     {
         $movie = new MovieModel();
-        $movie->update($id, [
+        if ($this->validate('movies')){
+            $movie->update($id, [
             'title' => $this->request->getpost('title'),
             'category_id' => $this->request->getpost('category_id'),
             'description' => $this->request->getpost('description')
         ]);
+        } else{
+            session()->setFlashdata([
+                'validation' => $this->validator
+            ]);
+            return redirect()->back();
+        }
+        
         
         return redirect()->to(base_url('Dashboard/movie'))->with('message', 'Registro editado correctamente'); ;
     }

@@ -41,4 +41,10 @@ class Validation extends BaseConfig
     // --------------------------------------------------------------------
     // Rules
     // --------------------------------------------------------------------
+    public $movies = [
+        'title' => 'required|min_length[3]|max_length[100]',
+        'category_id' => 'required',
+        'description'=> 'required|min_length[3]|max_length[1000]',
+    ];
+
 }

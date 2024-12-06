@@ -7,6 +7,9 @@ Editar
 <?= $this->section('contenido') ?>
 
 <div class="container mt-5">
+    <div class="card bg-info">
+        <?= view('partials/_form-error') ?>
+    </div>
     <form action=" <?php echo base_url('/Dashboard/movie/update/') ?><?php echo $view['id'] ?>" method="post">
         <label for="title">Title</label>
         <input class="form-control" type="text" id="title" name="title" value="<?php echo $view['title'] ?>" /><br />
