@@ -47,4 +47,9 @@ class Validation extends BaseConfig
         'description'=> 'required|min_length[3]|max_length[1000]',
     ];
 
+    public $usuarios = [
+        'usuario' => 'required|min_length[3]|max_length[10]|is_unique[usuarios.usuario]',
+        'email' => 'required|min_length[3]|max_length[100]|is_unique[usuarios.email]',
+        'contrasena' => 'required|min_length[3]|max_length[100]'
+    ];
 }

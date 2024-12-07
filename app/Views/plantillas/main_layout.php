@@ -42,7 +42,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href=" <?php echo base_url(); ?>register">Registro</a></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url(); ?>login ">Login</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('login'); ?> ">Login</a></li>
                                 <li><a class="dropdown-item" href=" <?php echo base_url(); ?>logout">Salir</a></li>
 
                             </ul>

@@ -13,9 +13,9 @@ class Usuario extends BaseController
 
         $usuarioModel->insert(
             [
-                'usuario' => 'admin',
-                'email' => 'admin@gmail.com',
-                'contrasena' => $usuarioModel->contrasenaHash('12345'),
+                'usuario' => 'julio',
+                'email' => 'julio@gmail.com',
+                'contrasena' => $usuarioModel->contrasenaHash('123'),
             ]
         );
     }
@@ -23,7 +23,7 @@ class Usuario extends BaseController
     public function probar_contrasena()
     {
         $usuarioModel = new UsuarioModel();
-        var_dump($usuarioModel->contrasenaVerificar('12345', '$2y$10$zmw1nhPaMbNTCDNY4Zj8yOMiJPVd7bHbLs.bmT5Qw8jRTDJLt3YMi'));
+        var_dump($usuarioModel->contrasenaVerificar('123', '$2y$10$w6CQgRb4b2Xoap7dnmQQXecf3Qv6NgiSiXIoPudnz7jxMzh1gu046'));
     }
 
     public function login()
@@ -45,17 +45,17 @@ class Usuario extends BaseController
             ->first();
 
         if (!$usuario) {
-            return redirect()->back()->with('mensaje', 'Usuario y/o contrasena invalida');
+            return redirect()->back()->with('message', 'Usuario y/o contrasena invalida');
         }
 
         if ($usuarioModel->contrasenaVerificar($contrasena, $usuario->contrasena)) {
             unset($usuario->contrasena);
             session()->set('usuario', $usuario);
 
-            return redirect()->to('/')->with('mensaje', "Bienvenid@ $usuario->usuario");
+            return redirect()->to('/')->with('message', "Bienvenid@ $usuario->usuario");
         }
 
-        return redirect()->back()->with('mensaje', 'Usuario y/o contrasena invalida');
+        return redirect()->back()->with('message', 'Usuario y/o contrasena invalida');
     }
     public function register()
     {
@@ -74,7 +74,7 @@ class Usuario extends BaseController
                 'contrasena' => $usuarioModel->contrasenaHash($this->request->getPost('contrasena')),
             ]);
 
-            return redirect()->to(route_to('usuario.login'))->with('mensaje', "Usuario registrado exitosamente");
+            return redirect()->to(route_to('usuario.login'))->with('message', "Usuario registrado exitosamente");
         }
 
         session()->setFlashdata([

@@ -7,8 +7,8 @@ md_julio
 
 <div class="container">
   <div class="card mt-5">
-    <h5> <?php $session = session();
-    echo ''. $session->usuario; ?></h5>
+    <h5> <?= view('partials/_session') ?> </h5>
+    
     <div class="container titulo">
       <h1>HOJA DE VIDA</h1>
       <hr />

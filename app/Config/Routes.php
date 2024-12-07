@@ -21,3 +21,7 @@ $routes->get('register', '\App\Controllers\Web\Usuario::register', ['as' => 'usu
 $routes->post('register_post', '\App\Controllers\Web\Usuario::register_post', ['as' => 'usuario.register_post']);
 
 $routes->get('logout', '\App\Controllers\Web\Usuario::logout', ['as' => 'usuario.logout']);
+
+//rutas de prueba
+//$routes->get('usuario/crear','\App\Controllers\Web\Usuario::crear_usuario');
+//$routes->get('usuario/probar/contrasena','\App\Controllers\Web\Usuario::probar_contrasena');

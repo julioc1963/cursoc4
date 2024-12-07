@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +10,7 @@
 </head>
 
 <body>
-
+   
     <?php echo $this->renderSection('contenido') ?>
 
 

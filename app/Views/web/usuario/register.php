@@ -5,7 +5,7 @@
 <?= view('partials/_form-error') ?>
 <div class="container">
     <h3>Registrarse</h3>
-<form action="<?= route_to('usuario.register_post') ?>" method="post">
+<form action="<?= base_url('register_post') ?>" method="post">
 
     <label for="usuario">Usuario</label>
     <input class="form-control" type="text" name="usuario" id="usuario">
